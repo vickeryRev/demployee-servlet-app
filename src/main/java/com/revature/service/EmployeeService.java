@@ -31,4 +31,8 @@ public class EmployeeService {
 	public List<Employee> getAll(){
 		return edao.findAll();
 	}
+	//forward primary key
+	public int register(Employee e) {
+		return edao.insert(e);
+	}
 }

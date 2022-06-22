@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>employees servlet app</title>
+</head>
+<body>
+	<h1>Welcome to employee app app</h1>
+	<h2>please login below:</h2>
+
+	<!-- post requests obfuscate the parapas and don't show it in the url -->
+
+	<form method="POST" action="login">
+		<!-- /employee-servlet-app/login -->
+
+		<label>Username</label> 
+		<input type="text" name="username"placeholder="Enter a username"> 
+		<br /> 
+		<label>Password</label>
+		<input type="password" name="password" placeholder="Enter a password">
+
+		<input type="submit" value="login">
+	</form>
+	<!-- use a from whenever you want to set up a button as a http request -->
+	<form method="GET" action="registration.html">
+	<input type="submit" value="Register">
+	</form>
+	
+	<form method="GET" action="employees">
+		<input type="submit" value="see all emps"/>
+	</form>
+</body>
+</html>

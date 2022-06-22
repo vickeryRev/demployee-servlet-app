@@ -18,21 +18,26 @@ public class EmployeeDao {
 		Session ses = HibernateUtil.getSession();
 //		beging tx
 		Transaction tx = ses.beginTransaction();
+		
 		//cap the pk
 		int pk = (int) ses.save(e);
+		tx.commit();
 		//return the pk
 		return pk;
 	}
 	//read all
-	public List<Employee> findAll(){
-		//grab sessions
+	// Read
+	public List<Employee> findAll() {
+		
+		// grab the session
 		Session ses = HibernateUtil.getSession();
 		
-		//make an HQL statement - odd mix of OOP and native sql
-		List<Employee> emps =  ses.createQuery("from Employee", Employee.class).list();
+		// make an HQL -- Hibernate Query Language: odd mix of OOP & native SQL
+		 List<Employee> emps = ses.createQuery("from Employee", Employee.class).list();
 		
-		//return said list
+		 // return the list of employees
 		return emps;
+		
 		
 	}
 	

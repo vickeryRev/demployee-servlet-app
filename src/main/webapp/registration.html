@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>registration</title>
+</head>
+<body>
+	<h1>Welcome to employee app app</h1>
+	<h2>please sign up below:</h2>
+	
+	<form method="POST" action="register">
+		<!-- /employee-servlet-app/register -->
+		
+		<!-- 
+		steps - webxml (program a /register url patter to point to the frotn controller
+				--set up case for register url in the front controller
+				--set up the request hlerp call to servis layer to inser employee object
+		 -->
+
+		<label>Username</label> 
+		<input type="text" name="username"placeholder="Enter a username"> 
+		<br /> 
+		<label>Password</label>
+		<input type="password" name="password" placeholder="Enter a password">
+		<label>First Name</label> 
+		<input type="text" name="firstname"placeholder="Enter a first name"> 
+		<br /> 
+		<label>Last Name</label> 
+		<input type="text" name="lastname"placeholder="Enter a last name"> 
+		<br /> 
+
+		<input type="submit" value="login">
+	</form>
+</body>
+</html>
